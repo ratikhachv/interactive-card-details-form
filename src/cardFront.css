@@ -1,0 +1,48 @@
+.card-front{
+    background: url(./imgs/card-BG-front.png);
+    background-size:cover;
+    margin-left: 42%;
+    width: max-content;
+    padding: clamp(15px, 10%, 25px);
+    border-radius: 10px;
+    margin-bottom: clamp(20px, 9%, 37px);
+}
+.card-num-display{
+    font-size: clamp(1rem, 1.9vw, 2rem);
+    margin-bottom: clamp(17px, 1.7vw, 28px);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 36px;
+    letter-spacing: 3.42222px;
+    color: #FFFFFF;
+    min-width: 21.1vw;
+}
+.cardholder-cvc-display{
+    display: flex;
+    justify-content: space-between;
+    font-size: clamp(8px, 0.95vw, 1rem);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.card-circles{
+    display: flex;
+    align-items: center;
+    margin-bottom: max(37px, 4.5vw);
+}
+.bigger-circle{
+    background: white;
+    border-radius: 50%;
+    width: clamp(30px, 3.2vw, 47px);
+    height: clamp(30px, 3.2vw, 47px);
+}
+.smaller-circle{
+    border: 1px solid #FFFFFF;
+    border-radius: 50%;
+    width: clamp(13px, 1.5vw, 22px);
+    height: clamp(13px, 1.5vw, 22px);
+    margin-left: 1.1vw;
+}

@@ -1,0 +1,41 @@
+.card-back{
+    background: url(./imgs/card-BG-back.png);
+    background-size:cover;
+    margin-left: 60%;
+    width: 107%;
+    border-radius: 10px;
+    padding-top: clamp(14px, 5.1%, 24px);
+    padding-bottom: clamp(27px, 10.5%, 50px)
+}
+
+.black-line{
+    width: 100%;
+    margin-bottom: clamp(14px, 5.1%, 24px);
+    height: clamp(35px,  3.8vw, 55px);
+    background:  #2F2F2F;
+}
+
+.cvc-display-back{
+    width: clamp(230px, 80%, 370px);
+    padding: 2.7%;
+    background: #ADB5BE;
+    border-radius: 4px;
+    margin-inline:  auto;
+    margin-bottom: clamp(24px, 9.6%, 35px);
+    font-weight: 500;
+    font-size: clamp(8px, 0.95vw, 1rem);
+    line-height: 18px;
+    text-align: right;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.card-back-stripes{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.card-back-stripes img{
+    width: 42%;
+}

@@ -1,0 +1,11 @@
+.left-side{
+    background: url(./imgs/ls-main-background.png);
+    background-size:cover;
+    overflow: visible;
+    padding-right: 6%;
+    width: max-content;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

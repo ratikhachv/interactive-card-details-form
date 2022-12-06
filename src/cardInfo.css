@@ -1,0 +1,16 @@
+.card-info form{
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+.card-info label{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #21092F;
+}
+.card-info div{
+    display: flex;
+}
