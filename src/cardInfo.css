@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     gap: 9px;
+    width: clamp(320px, 26.3vw, 390px);
 }
 .card-info label{
     font-weight: 500;
@@ -13,4 +14,27 @@
 }
 .card-info div{
     display: flex;
+}
+.card-info > div {
+    margin-bottom: 20px;
+}
+.card-info{
+    margin-left: 20%;
+}
+.card-number{
+    /* margin-bottom: 20px; */
+    display: flex;
+    flex-direction: column;
+}
+.warning{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FF5050;
+}
+@media (max-width: 750px){
+    .card-info{
+        margin-left: 0;
+        margin-top: clamp(80px, 30vw, 150px)
+    }
 }

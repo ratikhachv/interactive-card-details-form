@@ -8,8 +8,10 @@ export default function CardBack() {
   return (
     <div className="card-back">
       <div className="black-line">
+        <p>0000 0000 0000 0000 </p>
       </div>
       <div className="cvc-display-back">
+        <p className='cvc-hidden'>000</p>
         <p>{context.cvcDisplay}</p>
       </div>
       <div className="card-back-stripes">

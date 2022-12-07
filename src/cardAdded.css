@@ -1,0 +1,33 @@
+.card-added{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    align-items: center;
+}
+.card-added p{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    text-align: center;
+    color: #8F8694;
+}
+.thanks{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 36px;
+    text-align: center;
+    letter-spacing: 3.42222px;
+    color: #21092F;
+}
+.card-added img{
+    width: 80px;
+    height: 80px;
+}
+@media (max-width: 750px){
+    .card-added{
+        margin-left: 0;
+        margin-top: clamp(80px, 30vw, 150px)
+    }
+}

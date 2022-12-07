@@ -1,0 +1,22 @@
+.exp-date-cvc form{
+    display: flex;
+    flex-direction: row;
+}
+.exp-date{
+    display: flex;
+    flex-direction: column;
+    width:48%;
+    gap: 9px;
+}
+.exp-date-inputs{
+    gap: 5%;
+}
+.exp-date-inputs input{
+    width: 40%;
+}
+.cvc{
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    gap: 9px;
+}

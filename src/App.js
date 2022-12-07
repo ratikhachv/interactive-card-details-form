@@ -24,12 +24,16 @@ function App() {
   const [checkNums, setCheckNums] = useState("")
   const [checkBlankDate, setCheckBlanckDate] = useState("Can’t be blank")
   const [checkBlankCvc, setCheckBlankCvc] = useState("Can’t be blank")
+  const [confirmed, setConfirmed] = useState("")
+  const [btnText, setBtnText] = useState("confirm")
+  // const [expired, setExpired] = useState("")
 
   function changeCardholder(e){
     setCardholder(e.target.value)
     setCardholderDisplay(e.target.value)
     addDash(cardholder)
   }
+
   function addDash(string){
     let str;
     if(string.length > 2){
@@ -37,6 +41,7 @@ function App() {
     }
     return str
   }
+
   function changeCardNumber(e){
     let val = e.target.value;
     if(val.length <= 19){
@@ -44,6 +49,7 @@ function App() {
       let str =val.replace(/\W/gi, '').replace(/(.{4})/g, '$1 ')
       setCardNumber(str.trim())
       setCardNumberDisplay(str.trim())
+      console.log(cardNumberDisplay);
     }
     if (val.length >= 19) {
       //moves focus to another input
@@ -57,22 +63,21 @@ function App() {
       setCheckNums("")
     }
   }
+
   function changeMM(e){
-   
     if(e.target.value.length <= 2){
       setExpDateMM(e.target.value)
       setExpDateMMDisplay(e.target.value)
-      setCheckBlanckDate("")
+      if(e.target.value > 12){
+        setExpDateMM(12)
+      }
       if(e.target.value.length >=2){
         ref1.current.focus()
       }
     }
-    if(e.target.value.length == 0){
-      setCheckBlanckDate("cant")
-    }
   }
+
   function changeYY(e){
-    
     if(e.target.value.length <= 2){
       setExpDateYY(e.target.value)
       setExpDateYYDisplay(e.target.value)
@@ -80,11 +85,8 @@ function App() {
         ref2.current.focus()
       }
     }
-    if(e.target.value.length == 0){
-      setCheckBlanckDate("cant")
-    }
-    
   }
+
   function changeCvc(e){
     if(e.target.value.length <= 3){
       setCvc(e.target.value)
@@ -96,13 +98,23 @@ function App() {
     }
   }
 
+  function checkConfirmed(){
+    if(cardholder.length > 1 && cvc.length >= 3 && expDateYY.length
+       >= 2 && expDateMM.length >= 2 && cardNumber.length >= 18 && checkNums.length < 24){
+        console.log("wha");
+        setConfirmed(!confirmed)
+        setBtnText("Continue")
+       }
+  }
+
   return (
     <>
-      <Context.Provider value={{cardholder:cardholder, cardholderDisplay:cardholderDisplay, 
-      changeCardholder:changeCardholder, cardNumber:cardNumber, cardNumberDisplay:cardNumberDisplay,
-      changeCardNumber:changeCardNumber, ref, ref1, ref2, changeMM, expDateMM, 
-      changeYY, expDateYY, changeCvc, cvc, expDateMMDisplay, expDateYYDisplay, cvcDisplay, 
-      checkNums, checkBlankDate, checkBlankCvc}}>
+      <Context.Provider value={{cardholder, cardholderDisplay, 
+      changeCardholder, cardNumber, cardNumberDisplay,
+      changeCardNumber, ref, ref1, ref2, changeMM, expDateMM, 
+      changeYY, expDateYY, changeCvc, cvc, expDateMMDisplay, expDateYYDisplay, 
+      cvcDisplay, checkNums, checkBlankDate, checkBlankCvc, 
+      checkConfirmed, confirmed, btnText}}>
         <Container/>
       </Context.Provider>
     </>

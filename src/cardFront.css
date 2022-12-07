@@ -15,9 +15,17 @@
     line-height: 36px;
     letter-spacing: 3.42222px;
     color: #FFFFFF;
-    min-width: 21.1vw;
+    min-width: 23ch;
+    min-height: clamp(1rem, 1.9vw, 2rem);;
 }
-.cardholder-cvc-display{
+.hidden{
+    height: 0;
+    color: transparent;
+}
+.hidden-active{
+    color: transparent;
+}
+.cardholder-date-display{
     display: flex;
     justify-content: space-between;
     font-size: clamp(8px, 0.95vw, 1rem);
@@ -45,4 +53,12 @@
     width: clamp(13px, 1.5vw, 22px);
     height: clamp(13px, 1.5vw, 22px);
     margin-left: 1.1vw;
+}
+@media (max-width: 750px){
+    .card-front{
+        z-index: 1;
+        position:absolute;
+        margin-left: 10%;
+        margin-top: 30%;
+    }
 }
