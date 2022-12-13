@@ -1,7 +1,25 @@
 .container{
     display: flex;
+    font-family: 'Space Grotesk';
 }
-@media (max-width: 750px) {
+input{
+    padding: 2%;
+    border-radius: 8px;;
+    border: 1px solid #DFDEE0;
+}
+input::placeholder{
+    font-family: 'Space Grotesk';
+    color: #21092F;
+    mix-blend-mode: normal;
+    opacity: 0.25;
+}
+input, select, textarea{
+    font-family: 'Space Grotesk';
+}
+button{
+    font-family: 'Space Grotesk';
+}
+@media (max-width: 800px) {
     .container{
         flex-direction: column;
     }

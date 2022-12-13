@@ -9,7 +9,7 @@
     flex-direction: column;
     justify-content: center;
 }
-@media (max-width: 750px){
+@media (max-width: 800px){
     .left-side{
         height: max-content;
         min-width: 100vw;

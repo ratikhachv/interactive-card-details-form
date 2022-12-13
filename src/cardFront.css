@@ -6,6 +6,7 @@
     padding: clamp(15px, 10%, 25px);
     border-radius: 10px;
     margin-bottom: clamp(20px, 9%, 37px);
+    font-family: 'Space Grotesk';
 }
 .card-num-display{
     font-size: clamp(1rem, 1.9vw, 2rem);
@@ -54,7 +55,7 @@
     height: clamp(13px, 1.5vw, 22px);
     margin-left: 1.1vw;
 }
-@media (max-width: 750px){
+@media (max-width: 800px){
     .card-front{
         z-index: 1;
         position:absolute;
